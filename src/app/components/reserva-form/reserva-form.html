@@ -1,0 +1,24 @@
+<div *ngIf="espacio">
+
+<h2>Formulario de reserva</h2>
+
+<input type="text" placeholder="Responsable" [(ngModel)]="responsable">
+
+<br><br>
+
+<input type="text" placeholder="Carrera Solicitante" [(ngModel)]="carrera">
+
+<br><br>
+
+<input type="date" [(ngModel)]="fecha">
+
+<br><br>
+
+<input type="time" [(ngModel)]="hora">
+
+<br><br>
+
+<button (click)="guardar()"> Guardar </button>
+<button (click)="limpiar()"> Limpiar formulario </button>
+
+</div>

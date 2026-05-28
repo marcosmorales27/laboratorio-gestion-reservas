@@ -1,0 +1,26 @@
+<div class="card">
+
+  <img [src]="espacio.imagen" width="100%">
+
+  <h2>{{ espacio.nombre }}</h2>
+  
+  <p>Tipo:{{ espacio.tipo }}</p>
+  <p>Ubicación:{{ espacio.ubicacion }}</p>
+  <p>Capacidad:{{ espacio.capacidad }}</p>
+
+  <p
+  [ngClass]="{
+    disponible: espacio.disponible,
+    nodisponible: !espacio.disponible
+  }">
+
+    {{ espacio.disponible
+      ? 'Disponible'
+      : 'No disponible'
+    }}</p>
+
+  <p *ngIf="espacio.capacidad > 50"> Espacio de alta capacidad</p>
+
+  <button (click)="seleccionar()">Seleccionar</button>
+
+</div>

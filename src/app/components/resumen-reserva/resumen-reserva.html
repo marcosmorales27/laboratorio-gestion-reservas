@@ -1,0 +1,16 @@
+<div
+*ngIf="reserva$ | async as reserva">
+
+<h2>Resumen reserva</h2>
+
+<p>Espacio:{{ reserva.espacio.nombre }}</p>
+
+<p>Responsable:{{ reserva.responsable }}</p>
+
+<p>Carrera:{{ reserva.carrera }}</p>
+
+<p>Fecha:{{ reserva.fecha }}</p>
+
+<p>Hora: {{ reserva.hora }}</p>
+
+</div>

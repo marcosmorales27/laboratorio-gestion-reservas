@@ -1,0 +1,12 @@
+<h2>
+Espacios disponibles:
+{{ espaciosDisponibles }}
+</h2>
+
+<div class="contenedor-cards">
+  <app-espacio-card *ngFor="let espacio of espacios" [espacio]="espacio"(seleccionarEspacio)="recibirEspacio($event)">
+  </app-espacio-card>
+</div>
+
+<app-reserva-form [espacio]="espacioSeleccionado">
+</app-reserva-form>
